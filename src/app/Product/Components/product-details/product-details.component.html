@@ -1,2 +1,9 @@
-<h2>Carotte</h2>
-<p>Prix : <strong>3.99</strong>€</p>
+<h2>{{product.name}}</h2>
+<p>Prix : <strong>{{product.price | currency : 'EUR' : 'symbol' : '1.2-2'}}</strong></p>
+
+<textarea disabled>{{product | json}}</textarea>
+
+<h3>Commentaires : </h3>
+<textarea [(ngModel)]="comment" name="commentary" cols="60" rows="10"></textarea>
+<div><p><em>{{comment}}</em></p></div>
+<button (click)="confirm()" [disabled]="btn_disabled">Envoyer</button>

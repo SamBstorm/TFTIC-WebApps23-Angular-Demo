@@ -12,6 +12,10 @@ import { ProductEditComponent } from './Product/Components/product-edit/product-
 import { ProductRemoveComponent } from './Product/Components/product-remove/product-remove.component';
 import { ProductDetailsComponent } from './Product/Components/product-details/product-details.component';
 import { ProductMainComponent } from './Product/Components/product-main/product-main.component';
+import { FormsModule } from '@angular/forms';
+import { ToFahrenheitPipe } from './Pipes/to-fahrenheit.pipe';
+import { MainPipeComponent } from './Main/Components/main-pipe/main-pipe.component';
+import { ColorLevelPipe } from './Pipes/color-level.pipe';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { ProductMainComponent } from './Product/Components/product-main/product-
     ProductEditComponent,
     ProductRemoveComponent,
     ProductDetailsComponent,
-    ProductMainComponent
+    ProductMainComponent,
+    ToFahrenheitPipe,
+    MainPipeComponent,
+    ColorLevelPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

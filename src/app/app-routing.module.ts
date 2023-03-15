@@ -8,10 +8,12 @@ import { ProductEditComponent } from './Product/Components/product-edit/product-
 import { ProductListComponent } from './Product/Components/product-list/product-list.component';
 import { ProductDetailsComponent } from './Product/Components/product-details/product-details.component';
 import { ProductRemoveComponent } from './Product/Components/product-remove/product-remove.component';
+import { MainPipeComponent } from './Main/Components/main-pipe/main-pipe.component';
 
 const routes: Routes = [
   {path:"content1", component : MainContent01Component},
   {path:"content2", component : MainContent02Component},
+  {path:"contentpipe", component : MainPipeComponent},
   {path:'produit', component: ProductMainComponent, children:[
     {path:'add', component:ProductAddComponent},
     {path:'edit', component:ProductEditComponent},
